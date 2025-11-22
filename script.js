@@ -111,4 +111,13 @@ function createFirework() {
 }
 
 // --- DEV MODE: UNCOMMENT TO TEST NOW ---
-// unlockSurprise();
+// --- SECRET BACKDOOR FOR TESTING ---
+// Nasira sees the timer (Locked)
+// You see the surprise if you add ?mode=test to the URL
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('test')) {
+    console.log("Developer Mode: Unlocking Surprise...");
+    unlockSurprise();
+}
+
